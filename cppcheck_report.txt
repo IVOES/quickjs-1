@@ -1,0 +1,866 @@
+cutils.c:34:9: style: The scope of the variable 'c' can be reduced. [variableScope]
+    int c;
+        ^
+cutils.c:106:12: style: The scope of the variable 'size' can be reduced. [variableScope]
+    size_t size;
+           ^
+cutils.c:253:15: style: The scope of the variable 'b' can be reduced. [variableScope]
+    int l, c, b, i;
+              ^
+cutils.c:462:12: style: The scope of the variable 'i' can be reduced. [variableScope]
+    size_t i, n, c, r;
+           ^
+cutils.c:462:15: style: The scope of the variable 'n' can be reduced. [variableScope]
+    size_t i, n, c, r;
+              ^
+cutils.c:462:18: style: The scope of the variable 'c' can be reduced. [variableScope]
+    size_t i, n, c, r;
+                 ^
+cutils.c:462:21: style: The scope of the variable 'r' can be reduced. [variableScope]
+    size_t i, n, c, r;
+                    ^
+cutils.c:506:12: style: The scope of the variable 'depth' can be reduced. [variableScope]
+    int c, depth;
+           ^
+cutils.c:510:27: style: Checking if unsigned expression 'size' is less than zero. [unsignedLessThanZero]
+    if (nmemb < 2 || size <= 0)
+                          ^
+cutils.c:501:69: style:inconclusive: Function 'rqsort' argument 5 names different: declaration 'arg' definition 'opaque'. [funcArgNamesDifferent]
+void rqsort(void *base, size_t nmemb, size_t size, cmp_f cmp, void *opaque)
+                                                                    ^
+cutils.h:295:19: note: Function 'rqsort' argument 5 names different: declaration 'arg' definition 'opaque'.
+            void *arg);
+                  ^
+cutils.c:501:69: note: Function 'rqsort' argument 5 names different: declaration 'arg' definition 'opaque'.
+void rqsort(void *base, size_t nmemb, size_t size, cmp_f cmp, void *opaque)
+                                                                    ^
+libbf.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+libbf.c:979:33: style:inconclusive: Boolean expression 'u<carry' is used in bitwise operation. Did you mean '||'? [bitwiseOnBoolean]
+            carry = (u < carry) | carry1;
+                                ^
+libbf.c:990:33: style:inconclusive: Boolean expression 'u<carry' is used in bitwise operation. Did you mean '||'? [bitwiseOnBoolean]
+            carry = (u < carry) | carry1;
+                                ^
+libbf.c:1036:21: style:inconclusive: Boolean expression 'a<k' is used in bitwise operation. Did you mean '||'? [bitwiseOnBoolean]
+        k = (a < k) | k1;
+                    ^
+libbf.c:1070:21: style:inconclusive: Boolean expression 'v>a' is used in bitwise operation. Did you mean '||'? [bitwiseOnBoolean]
+        k = (v > a) | k1;
+                    ^
+libbf.c:1088:21: style:inconclusive: Boolean expression 'v>a' is used in bitwise operation. Did you mean '||'? [bitwiseOnBoolean]
+        k = (v > a) | k1;
+                    ^
+libbf.c:678:5: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+    printf("%s: len=%" PRId_LIMB "\n", str, n);
+    ^
+libbf.c:680:9: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+        printf("%" PRId_LIMB ": " FMT_LIMB "\n",
+        ^
+libbf.c:1321:11: style: Variable 'r' is reassigned a value before the old one has been used. [redundantAssignment]
+        r = mp_sub_mul1(taba + i, tabb, nb, q);
+          ^
+libbf.c:1319:15: note: r is assigned
+            r = al % b1;
+              ^
+libbf.c:1321:11: note: r is overwritten
+        r = mp_sub_mul1(taba + i, tabb, nb, q);
+          ^
+libbf.c:5489:8: style: Variable 't0' is reassigned a value before the old one has been used. [redundantAssignment]
+    t0 = (a - t1) >> s->shift1;
+       ^
+libbf.c:5488:5: note: t0 is assigned
+    muldq(t1, t0, s->m1, a);
+    ^
+libbf.c:5489:8: note: t0 is overwritten
+    t0 = (a - t1) >> s->shift1;
+       ^
+libbf.c:5654:9: style: Variable '__t1' is reassigned a value before the old one has been used. [redundantAssignment]
+        divdq_base(l, r, t1, t0);
+        ^
+libbf.c:5654:9: note: __t1 is assigned
+        divdq_base(l, r, t1, t0);
+        ^
+libbf.c:5654:9: note: __t1 is overwritten
+        divdq_base(l, r, t1, t0);
+        ^
+libbf.c:5673:9: style: Variable '__t1' is reassigned a value before the old one has been used. [redundantAssignment]
+        divdq_base(l, r, t1, t0);
+        ^
+libbf.c:5673:9: note: __t1 is assigned
+        divdq_base(l, r, t1, t0);
+        ^
+libbf.c:5673:9: note: __t1 is overwritten
+        divdq_base(l, r, t1, t0);
+        ^
+libbf.c:5693:9: style: Variable '__t1' is reassigned a value before the old one has been used. [redundantAssignment]
+        divdq_base(l, r, t1, t0);
+        ^
+libbf.c:5693:9: note: __t1 is assigned
+        divdq_base(l, r, t1, t0);
+        ^
+libbf.c:5693:9: note: __t1 is overwritten
+        divdq_base(l, r, t1, t0);
+        ^
+libbf.c:5895:11: style: Variable 'r' is reassigned a value before the old one has been used. [redundantAssignment]
+        r = mp_sub_mul1_dec(taba + i, tabb, nb, q);
+          ^
+libbf.c:5891:13: note: r is assigned
+            divdq(q, r, t1, t0, tabb[nb - 1]);
+            ^
+libbf.c:5895:11: note: r is overwritten
+        r = mp_sub_mul1_dec(taba + i, tabb, nb, q);
+          ^
+libbf.c:5988:5: style: Variable '__t1' is reassigned a value before the old one has been used. [redundantAssignment]
+    divdq_base(r1, r0, r >> LIMB_BITS, r);
+    ^
+libbf.c:5988:5: note: __t1 is assigned
+    divdq_base(r1, r0, r >> LIMB_BITS, r);
+    ^
+libbf.c:5988:5: note: __t1 is overwritten
+    divdq_base(r1, r0, r >> LIMB_BITS, r);
+    ^
+libbf.c:320:19: style: The scope of the variable 'a1' can be reduced. [variableScope]
+    limb_t i, a0, a1;
+                  ^
+libbf.c:450:13: style: The scope of the variable 'i' can be reduced. [variableScope]
+    slimb_t i, l, e_max;
+            ^
+libbf.c:450:16: style: The scope of the variable 'l' can be reduced. [variableScope]
+    slimb_t i, l, e_max;
+               ^
+libbf.c:450:19: style: The scope of the variable 'e_max' can be reduced. [variableScope]
+    slimb_t i, l, e_max;
+                  ^
+libbf.c:594:15: style: The scope of the variable 'v' can be reduced. [variableScope]
+    limb_t l, v, a;
+              ^
+libbf.c:594:18: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t l, v, a;
+                 ^
+libbf.c:595:9: style: The scope of the variable 'shift' can be reduced. [variableScope]
+    int shift, ret;
+        ^
+libbf.c:596:13: style: The scope of the variable 'i' can be reduced. [variableScope]
+    slimb_t i;
+            ^
+libbf.c:714:13: style: The scope of the variable 'i' can be reduced. [variableScope]
+    slimb_t i;
+            ^
+libbf.c:741:17: style: The scope of the variable 'v1' can be reduced. [variableScope]
+    limb_t len, v1, v2;
+                ^
+libbf.c:741:21: style: The scope of the variable 'v2' can be reduced. [variableScope]
+    limb_t len, v1, v2;
+                    ^
+libbf.c:1028:15: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t k, a, v, k1;
+              ^
+libbf.c:1028:18: style: The scope of the variable 'v' can be reduced. [variableScope]
+    limb_t k, a, v, k1;
+                 ^
+libbf.c:1028:21: style: The scope of the variable 'k1' can be reduced. [variableScope]
+    limb_t k, a, v, k1;
+                    ^
+libbf.c:1045:15: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t k, a;
+              ^
+libbf.c:1062:15: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t k, a, v, k1;
+              ^
+libbf.c:1062:18: style: The scope of the variable 'v' can be reduced. [variableScope]
+    limb_t k, a, v, k1;
+                 ^
+libbf.c:1062:21: style: The scope of the variable 'k1' can be reduced. [variableScope]
+    limb_t k, a, v, k1;
+                    ^
+libbf.c:1080:15: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t k, a, v, k1;
+              ^
+libbf.c:1080:18: style: The scope of the variable 'v' can be reduced. [variableScope]
+    limb_t k, a, v, k1;
+                 ^
+libbf.c:1080:21: style: The scope of the variable 'k1' can be reduced. [variableScope]
+    limb_t k, a, v, k1;
+                    ^
+libbf.c:1097:15: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t k, a, v;
+              ^
+libbf.c:1097:18: style: The scope of the variable 'v' can be reduced. [variableScope]
+    limb_t k, a, v;
+                 ^
+libbf.c:1117:15: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t l, a;
+              ^
+libbf.c:1134:13: style: The scope of the variable 't' can be reduced. [variableScope]
+    dlimb_t t;
+            ^
+libbf.c:1149:13: style: The scope of the variable 't' can be reduced. [variableScope]
+    dlimb_t t;
+            ^
+libbf.c:1165:15: style: The scope of the variable 'r' can be reduced. [variableScope]
+    limb_t i, r;
+              ^
+libbf.c:1202:13: style: The scope of the variable 't' can be reduced. [variableScope]
+    dlimb_t t;
+            ^
+libbf.c:1257:17: style: The scope of the variable 'a1' can be reduced. [variableScope]
+        dlimb_t a1;
+                ^
+libbf.c:1278:12: style: The scope of the variable 'r' can be reduced. [variableScope]
+    limb_t r, a, c, q, v, b1, b1_inv, n, dummy_r;
+           ^
+libbf.c:1278:15: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t r, a, c, q, v, b1, b1_inv, n, dummy_r;
+              ^
+libbf.c:1278:18: style: The scope of the variable 'c' can be reduced. [variableScope]
+    limb_t r, a, c, q, v, b1, b1_inv, n, dummy_r;
+                 ^
+libbf.c:1278:24: style: The scope of the variable 'v' can be reduced. [variableScope]
+    limb_t r, a, c, q, v, b1, b1_inv, n, dummy_r;
+                       ^
+libbf.c:1623:12: style: The scope of the variable 'v' can be reduced. [variableScope]
+    limb_t v;
+           ^
+libbf.c:2759:25: style: The scope of the variable 'overflow' can be reduced. [variableScope]
+    int ret, expn_sign, overflow;
+                        ^
+libbf.c:2760:16: style: The scope of the variable 'extra_bits' can be reduced. [variableScope]
+    slimb_t e, extra_bits, prec1, ziv_extra_bits;
+               ^
+libbf.c:2760:28: style: The scope of the variable 'prec1' can be reduced. [variableScope]
+    slimb_t e, extra_bits, prec1, ziv_extra_bits;
+                           ^
+libbf.c:2760:35: style: The scope of the variable 'ziv_extra_bits' can be reduced. [variableScope]
+    slimb_t e, extra_bits, prec1, ziv_extra_bits;
+                                  ^
+libbf.c:3492:16: style: The scope of the variable 'e' can be reduced. [variableScope]
+    slimb_t E, e, prec, extra_bits, ziv_extra_bits, prec0;
+               ^
+libbf.c:3492:37: style: The scope of the variable 'ziv_extra_bits' can be reduced. [variableScope]
+    slimb_t E, e, prec, extra_bits, ziv_extra_bits, prec0;
+                                    ^
+libbf.c:3492:53: style: The scope of the variable 'prec0' can be reduced. [variableScope]
+    slimb_t E, e, prec, extra_bits, ziv_extra_bits, prec0;
+                                                    ^
+libbf.c:3494:9: style: The scope of the variable 'e_sign' can be reduced. [variableScope]
+    int e_sign, ret, res;
+        ^
+libbf.c:3597:9: style: The scope of the variable 'digit' can be reduced. [variableScope]
+    int digit, i;
+        ^
+libbf.c:4070:13: style: The scope of the variable 'c' can be reduced. [variableScope]
+    int64_t c;
+            ^
+libbf.c:4156:28: style: The scope of the variable 'prec1' can be reduced. [variableScope]
+    limb_t ziv_extra_bits, prec1;
+                           ^
+libbf.c:4225:13: style: The scope of the variable 'prec1' can be reduced. [variableScope]
+    slimb_t prec1, ziv_extra_bits;
+            ^
+libbf.c:4225:20: style: The scope of the variable 'ziv_extra_bits' can be reduced. [variableScope]
+    slimb_t prec1, ziv_extra_bits;
+                   ^
+libbf.c:4847:34: style: The scope of the variable 'prec2' can be reduced. [variableScope]
+    slimb_t K, prec1, i, l, mod, prec2;
+                                 ^
+libbf.c:5570:15: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t k, a, v;
+              ^
+libbf.c:5570:18: style: The scope of the variable 'v' can be reduced. [variableScope]
+    limb_t k, a, v;
+                 ^
+libbf.c:5589:15: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t k, a, v;
+              ^
+libbf.c:5589:18: style: The scope of the variable 'v' can be reduced. [variableScope]
+    limb_t k, a, v;
+                 ^
+libbf.c:5610:15: style: The scope of the variable 'v' can be reduced. [variableScope]
+    limb_t k, v, a;
+              ^
+libbf.c:5610:18: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t k, v, a;
+                 ^
+libbf.c:5628:15: style: The scope of the variable 'v' can be reduced. [variableScope]
+    limb_t k, v, a;
+              ^
+libbf.c:5628:18: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t k, v, a;
+                 ^
+libbf.c:5686:26: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t l, t0, t1, r, a, v, c;
+                         ^
+libbf.c:5686:29: style: The scope of the variable 'v' can be reduced. [variableScope]
+    limb_t l, t0, t1, r, a, v, c;
+                            ^
+libbf.c:5686:32: style: The scope of the variable 'c' can be reduced. [variableScope]
+    limb_t l, t0, t1, r, a, v, c;
+                               ^
+libbf.c:5712:12: style: The scope of the variable 'r' can be reduced. [variableScope]
+    limb_t r;
+           ^
+libbf.c:5941:15: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t l, a, q, r;
+              ^
+libbf.c:5941:21: style: The scope of the variable 'r' can be reduced. [variableScope]
+    limb_t l, a, q, r;
+                    ^
+libbf.c:5959:15: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t l, a, q, r;
+              ^
+libbf.c:5959:21: style: The scope of the variable 'r' can be reduced. [variableScope]
+    limb_t l, a, q, r;
+                    ^
+libbf.c:6272:13: style: The scope of the variable 'i' can be reduced. [variableScope]
+    slimb_t i;
+            ^
+libbf.c:6529:15: style: The scope of the variable 'v' can be reduced. [variableScope]
+    limb_t l, v;
+              ^
+libbf.c:6530:9: style: The scope of the variable 'shift' can be reduced. [variableScope]
+    int shift, ret;
+        ^
+libbf.c:7725:38: style: The scope of the variable 'p' can be reduced. [variableScope]
+    limb_t nb_blocks, fft_per_block, p, k, n, stride_in, i, j, m, m2;
+                                     ^
+libbf.c:7784:31: style: The scope of the variable 'a' can be reduced. [variableScope]
+    limb_t i, norm, norm_inv, a, n, m, m_inv;
+                              ^
+libbf.c:7943:20: style: The scope of the variable 'i' can be reduced. [variableScope]
+    limb_t n1, n2, i;
+                   ^
+libbf.c:323:13: portability: Shifting a negative value is technically undefined behaviour [shiftNegativeLHS]
+    i = pos >> LIMB_LOG2_BITS;
+            ^
+libbf.c:3145:19: style:inconclusive: Function 'bf_atof' argument 1 names different: declaration 'a' definition 'r'. [funcArgNamesDifferent]
+int bf_atof(bf_t *r, const char *str, const char **pnext, int radix,
+                  ^
+libbf.h:318:19: note: Function 'bf_atof' argument 1 names different: declaration 'a' definition 'r'.
+int bf_atof(bf_t *a, const char *str, const char **pnext, int radix,
+                  ^
+libbf.c:3145:19: note: Function 'bf_atof' argument 1 names different: declaration 'a' definition 'r'.
+int bf_atof(bf_t *r, const char *str, const char **pnext, int radix,
+                  ^
+libbf.c:6556:39: style:inconclusive: Function 'bfdec_set_ui' argument 2 names different: declaration 'a' definition 'v'. [funcArgNamesDifferent]
+int bfdec_set_ui(bfdec_t *r, uint64_t v)
+                                      ^
+libbf.h:452:39: note: Function 'bfdec_set_ui' argument 2 names different: declaration 'a' definition 'v'.
+int bfdec_set_ui(bfdec_t *r, uint64_t a);
+                                      ^
+libbf.c:6556:39: note: Function 'bfdec_set_ui' argument 2 names different: declaration 'a' definition 'v'.
+int bfdec_set_ui(bfdec_t *r, uint64_t v)
+                                      ^
+libbf.c:6588:38: style:inconclusive: Function 'bfdec_set_si' argument 2 names different: declaration 'a' definition 'v'. [funcArgNamesDifferent]
+int bfdec_set_si(bfdec_t *r, int64_t v)
+                                     ^
+libbf.h:453:38: note: Function 'bfdec_set_si' argument 2 names different: declaration 'a' definition 'v'.
+int bfdec_set_si(bfdec_t *r, int64_t a);
+                                     ^
+libbf.c:6588:38: note: Function 'bfdec_set_si' argument 2 names different: declaration 'a' definition 'v'.
+int bfdec_set_si(bfdec_t *r, int64_t v)
+                                     ^
+libbf.c:7855:36: style:inconclusive: Function 'fft_clear_cache' argument 1 names different: declaration 's' definition 's1'. [funcArgNamesDifferent]
+void fft_clear_cache(bf_context_t *s1)
+                                   ^
+libbf.c:86:43: note: Function 'fft_clear_cache' argument 1 names different: declaration 's' definition 's1'.
+static void fft_clear_cache(bf_context_t *s);
+                                          ^
+libbf.c:7855:36: note: Function 'fft_clear_cache' argument 1 names different: declaration 's' definition 's1'.
+void fft_clear_cache(bf_context_t *s1)
+                                   ^
+libbf.c:8358:44: style:inconclusive: Function 'fft_mul' argument 1 names different: declaration 's' definition 's1'. [funcArgNamesDifferent]
+static no_inline int fft_mul(bf_context_t *s1,
+                                           ^
+libbf.c:83:44: note: Function 'fft_mul' argument 1 names different: declaration 's' definition 's1'.
+static no_inline int fft_mul(bf_context_t *s,
+                                           ^
+libbf.c:8358:44: note: Function 'fft_mul' argument 1 names different: declaration 's' definition 's1'.
+static no_inline int fft_mul(bf_context_t *s1,
+                                           ^
+libbf.c:3942:37: style: Local variable 'fmt' shadows outer variable [shadowVariable]
+                        const char *fmt;
+                                    ^
+libbf.c:3721:17: note: Shadowed declaration
+            int fmt, ret;
+                ^
+libbf.c:3942:37: note: Shadow variable
+                        const char *fmt;
+                                    ^
+libbf.c:4445:14: style: Local variable 'U_s' shadows outer variable [shadowVariable]
+        bf_t U_s, *U = &U_s;
+             ^
+libbf.c:4435:10: note: Shadowed declaration
+    bf_t U_s, *U = &U_s;
+         ^
+libbf.c:4445:14: note: Shadow variable
+        bf_t U_s, *U = &U_s;
+             ^
+libbf.c:4445:20: style: Local variable 'U' shadows outer variable [shadowVariable]
+        bf_t U_s, *U = &U_s;
+                   ^
+libbf.c:4435:16: note: Shadowed declaration
+    bf_t U_s, *U = &U_s;
+               ^
+libbf.c:4445:20: note: Shadow variable
+        bf_t U_s, *U = &U_s;
+                   ^
+libbf.c:163:16: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+        r = (a >> (LIMB_BITS - 1)) ^ (((limb_t)1 << (LIMB_BITS - 1)) - 1);
+               ^
+libbf.c:1229:24: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+    n1m = ((slimb_t)a0 >> (LIMB_BITS - 1));
+                       ^
+libbf.c:1871:13: style: The scope of the variable 't' can be reduced. [variableScope]
+    dlimb_t t;
+            ^
+libbf.c:7421:26: error: Shifting 32-bit value by 51 bits is undefined behaviour [shiftTooManyBits]
+    assert(m < (limb_t)1 << NTT_MOD_LOG2_MAX);
+                         ^
+libbf.c:7422:27: error: Shifting 32-bit value by 50 bits is undefined behaviour [shiftTooManyBits]
+    assert(m >= (limb_t)1 << NTT_MOD_LOG2_MIN);
+                          ^
+libbf.c:7423:20: error: Shifting 64-bit value by 82 bits is undefined behaviour [shiftTooManyBits]
+    t = (dlimb_t)1 << (LIMB_BITS + NTT_MOD_LOG2_MIN);
+                   ^
+libregexp.c:2519:17: warning: Obsolete function 'alloca' called. In C99 and later it is recommended to use a variable length array instead. [allocaCalled]
+    stack_buf = alloca(alloca_size);
+                ^
+libregexp.c:657:21: style: Condition 'ret==-2' is always false [knownConditionTrueFalse]
+            if (ret == -2)
+                    ^
+libregexp.c:655:13: note: Assuming condition 'ret' is true
+        if (ret) {
+            ^
+libregexp.c:657:21: note: Condition 'ret==-2' is always false
+            if (ret == -2)
+                    ^
+libregexp.c:667:21: style: Condition 'ret==-2' is always false [knownConditionTrueFalse]
+            if (ret == -2)
+                    ^
+libregexp.c:665:13: note: Assuming condition 'ret' is true
+        if (ret) {
+            ^
+libregexp.c:667:21: note: Condition 'ret==-2' is always false
+            if (ret == -2)
+                    ^
+libregexp.c:683:25: style: Condition 'ret==-2' is always false [knownConditionTrueFalse]
+                if (ret == -2)
+                        ^
+libregexp.c:681:17: note: Assuming condition 'ret' is true
+            if (ret) {
+                ^
+libregexp.c:683:25: note: Condition 'ret==-2' is always false
+                if (ret == -2)
+                        ^
+libregexp.c:1426:49: style: Condition '*p<='7'' is always true [knownConditionTrueFalse]
+                            if (*p >= '0' && *p <= '7') {
+                                                ^
+libregexp.c:1422:32: note: Assuming condition '*p<='7'' is true
+                        if (*p <= '7') {
+                               ^
+libregexp.c:1426:49: note: Condition '*p<='7'' is always true
+                            if (*p >= '0' && *p <= '7') {
+                                                ^
+libregexp.c:175:15: style: The scope of the variable 'low' can be reduced. [variableScope]
+    int i, n, low, high;
+              ^
+libregexp.c:175:20: style: The scope of the variable 'high' can be reduced. [variableScope]
+    int i, n, low, high;
+                   ^
+libregexp.c:450:9: style: The scope of the variable 'c' can be reduced. [variableScope]
+    int c;
+        ^
+libregexp.c:521:20: style: The scope of the variable 'n' can be reduced. [variableScope]
+            int h, n, i;
+                   ^
+libregexp.c:521:23: style: The scope of the variable 'i' can be reduced. [variableScope]
+            int h, n, i;
+                      ^
+libregexp.c:522:22: style: The scope of the variable 'c1' can be reduced. [variableScope]
+            uint32_t c1;
+                     ^
+libregexp.c:822:14: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int len, i;
+             ^
+libregexp.c:823:14: style: The scope of the variable 'high' can be reduced. [variableScope]
+    uint32_t high;
+             ^
+libregexp.c:1077:14: style: The scope of the variable 'c' can be reduced. [variableScope]
+    uint32_t c;
+             ^
+libregexp.c:1190:12: style: The scope of the variable 'len' can be reduced. [variableScope]
+    size_t len, name_len;
+           ^
+libregexp.c:1698:20: style: The scope of the variable 'p' can be reduced. [variableScope]
+    const uint8_t *p;
+                   ^
+libregexp.c:1699:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+libregexp.c:1700:19: style: The scope of the variable 'term_start' can be reduced. [variableScope]
+    size_t start, term_start, end, term_size;
+                  ^
+libregexp.c:1732:16: style: The scope of the variable 'len' can be reduced. [variableScope]
+    int start, len, pos;
+               ^
+libregexp.c:1732:21: style: The scope of the variable 'pos' can be reduced. [variableScope]
+    int start, len, pos;
+                    ^
+libregexp.c:1764:42: style: The scope of the variable 'opcode' can be reduced. [variableScope]
+    int stack_size, stack_size_max, pos, opcode, len;
+                                         ^
+libregexp.c:1764:50: style: The scope of the variable 'len' can be reduced. [variableScope]
+    int stack_size, stack_size_max, pos, opcode, len;
+                                                 ^
+libregexp.c:2047:12: style: The scope of the variable 'new_size' can be reduced. [variableScope]
+    size_t new_size, i, n;
+           ^
+libregexp.c:1682:33: style: Variable 'last_atom_start' is assigned a value that is never used. [unreadVariable]
+                last_atom_start = -1;
+                                ^
+libregexp.c:307:28: warning: Either the condition 'opcode>=REOP_COUNT' is redundant or the array 'reopcode_info[29]' is accessed at index 29, which is out of bounds. [arrayIndexOutOfBoundsCond]
+        len = reopcode_info[opcode].size;
+                           ^
+libregexp.c:308:20: note: Assuming that condition 'opcode>=REOP_COUNT' is not redundant
+        if (opcode >= REOP_COUNT) {
+                   ^
+libregexp.c:307:28: note: Array index out of bounds
+        len = reopcode_info[opcode].size;
+                           ^
+libregexp.c:305:9: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+        printf("%5u: ", pos);
+        ^
+libregexp.c:361:13: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            printf(" %d", val);
+            ^
+libregexp.c:2582:17: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+                printf("%u", (int)(ptr - (uint8_t *)input));
+                ^
+libregexp.c:2522:5: error: Return value of allocation function 'lre_realloc' is not stored. [leakReturnValNotUsed]
+    lre_realloc(s->opaque, s->state_stack, 0);
+    ^
+libregexp.c:277:14: style: The scope of the variable 'len' can be reduced. [variableScope]
+    int pos, len, opcode, bc_len, re_flags, i;
+             ^
+libregexp.c:277:19: style: The scope of the variable 'opcode' can be reduced. [variableScope]
+    int pos, len, opcode, bc_len, re_flags, i;
+                  ^
+libregexp.c:277:45: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int pos, len, opcode, bc_len, re_flags, i;
+                                            ^
+libregexp.c:2550:19: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int len, ret, i;
+                  ^
+libregexp.c:2555:20: style: The scope of the variable 'capture_count' can be reduced. [variableScope]
+    int input_len, capture_count;
+                   ^
+libregexp.c:365:24: style: Local variable 'i' shadows outer variable [shadowVariable]
+                int n, i;
+                       ^
+libregexp.c:277:45: note: Shadowed declaration
+    int pos, len, opcode, bc_len, re_flags, i;
+                                            ^
+libregexp.c:365:24: note: Shadow variable
+                int n, i;
+                       ^
+libregexp.c:376:24: style: Local variable 'i' shadows outer variable [shadowVariable]
+                int n, i;
+                       ^
+libregexp.c:277:45: note: Shadowed declaration
+    int pos, len, opcode, bc_len, re_flags, i;
+                                            ^
+libregexp.c:376:24: note: Shadow variable
+                int n, i;
+                       ^
+libunicode.c:69:18: style: The scope of the variable 'v' can be reduced. [variableScope]
+        uint32_t v, code, data, type, len, a, is_lower;
+                 ^
+libunicode.c:69:21: style: The scope of the variable 'code' can be reduced. [variableScope]
+        uint32_t v, code, data, type, len, a, is_lower;
+                    ^
+libunicode.c:69:39: style: The scope of the variable 'len' can be reduced. [variableScope]
+        uint32_t v, code, data, type, len, a, is_lower;
+                                      ^
+libunicode.c:70:13: style: The scope of the variable 'idx' can be reduced. [variableScope]
+        int idx, idx_min, idx_max;
+            ^
+libunicode.c:176:27: style: The scope of the variable 'idx' can be reduced. [variableScope]
+    int idx_min, idx_max, idx;
+                          ^
+libunicode.c:208:20: style: The scope of the variable 'b' can be reduced. [variableScope]
+    uint32_t code, b, bit;
+                   ^
+libunicode.c:242:14: style: The scope of the variable 'v' can be reduced. [variableScope]
+    uint32_t v, code, len;
+             ^
+libunicode.c:242:17: style: The scope of the variable 'code' can be reduced. [variableScope]
+    uint32_t v, code, len;
+                ^
+libunicode.c:242:23: style: The scope of the variable 'len' can be reduced. [variableScope]
+    uint32_t v, code, len;
+                      ^
+libunicode.c:243:9: style: The scope of the variable 'idx' can be reduced. [variableScope]
+    int idx, idx_min, idx_max;
+        ^
+libunicode.c:301:9: style: The scope of the variable 'new_size' can be reduced. [variableScope]
+    int new_size;
+        ^
+libunicode.c:641:14: style: The scope of the variable 'v' can be reduced. [variableScope]
+    uint32_t v, type, is_compat, code, len;
+             ^
+libunicode.c:641:34: style: The scope of the variable 'code' can be reduced. [variableScope]
+    uint32_t v, type, is_compat, code, len;
+                                 ^
+libunicode.c:641:40: style: The scope of the variable 'len' can be reduced. [variableScope]
+    uint32_t v, type, is_compat, code, len;
+                                       ^
+libunicode.c:642:27: style: The scope of the variable 'idx' can be reduced. [variableScope]
+    int idx_min, idx_max, idx;
+                          ^
+libunicode.c:670:14: style: The scope of the variable 'code' can be reduced. [variableScope]
+    uint32_t code, len, type, v, idx1, d_idx, d_offset, ch;
+             ^
+libunicode.c:670:20: style: The scope of the variable 'len' can be reduced. [variableScope]
+    uint32_t code, len, type, v, idx1, d_idx, d_offset, ch;
+                   ^
+libunicode.c:670:25: style: The scope of the variable 'type' can be reduced. [variableScope]
+    uint32_t code, len, type, v, idx1, d_idx, d_offset, ch;
+                        ^
+libunicode.c:670:31: style: The scope of the variable 'v' can be reduced. [variableScope]
+    uint32_t code, len, type, v, idx1, d_idx, d_offset, ch;
+                              ^
+libunicode.c:670:34: style: The scope of the variable 'idx1' can be reduced. [variableScope]
+    uint32_t code, len, type, v, idx1, d_idx, d_offset, ch;
+                                 ^
+libunicode.c:670:40: style: The scope of the variable 'd_idx' can be reduced. [variableScope]
+    uint32_t code, len, type, v, idx1, d_idx, d_offset, ch;
+                                       ^
+libunicode.c:670:47: style: The scope of the variable 'd_offset' can be reduced. [variableScope]
+    uint32_t code, len, type, v, idx1, d_idx, d_offset, ch;
+                                              ^
+libunicode.c:670:57: style: The scope of the variable 'ch' can be reduced. [variableScope]
+    uint32_t code, len, type, v, idx1, d_idx, d_offset, ch;
+                                                        ^
+libunicode.c:671:27: style: The scope of the variable 'idx' can be reduced. [variableScope]
+    int idx_min, idx_max, idx, d;
+                          ^
+libunicode.c:671:32: style: The scope of the variable 'd' can be reduced. [variableScope]
+    int idx_min, idx_max, idx, d;
+                               ^
+libunicode.c:706:20: style: The scope of the variable 'n' can be reduced. [variableScope]
+    uint32_t code, n, type, cc, c1, b;
+                   ^
+libunicode.c:706:23: style: The scope of the variable 'type' can be reduced. [variableScope]
+    uint32_t code, n, type, cc, c1, b;
+                      ^
+libunicode.c:706:33: style: The scope of the variable 'c1' can be reduced. [variableScope]
+    uint32_t code, n, type, cc, c1, b;
+                                ^
+libunicode.c:706:37: style: The scope of the variable 'b' can be reduced. [variableScope]
+    uint32_t code, n, type, cc, c1, b;
+                                    ^
+libunicode.c:794:14: style: The scope of the variable 'c' can be reduced. [variableScope]
+    uint32_t c, v;
+             ^
+libunicode.c:1114:17: style: The scope of the variable 'c0' can be reduced. [variableScope]
+    uint32_t c, c0, b, bit;
+                ^
+libunicode.c:1114:21: style: The scope of the variable 'b' can be reduced. [variableScope]
+    uint32_t c, c0, b, bit;
+                    ^
+libunicode.c:540:29: style: Local variable 'p' shadows outer variable [shadowVariable]
+                uint32_t k, p;
+                            ^
+libunicode.c:521:15: note: Shadowed declaration
+    int l, i, p;
+              ^
+libunicode.c:540:29: note: Shadow variable
+                uint32_t k, p;
+                            ^
+libunicode.c:334:7: style: Variable 'j' is assigned a value that is never used. [unreadVariable]
+    j = 0;
+      ^
+quickjs.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 29 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+quickjs-opcode.h:65:1: error: syntax error [syntaxError]
+DEF(invalid, 1, 0, 0, none) /* never emitted */
+^
+bridge.c:3:0: style: The function 'InvokeProxy' is never used. [unusedFunction]
+
+^
+libbf.c:5301:0: style: The function 'bf_acos' is never used. [unusedFunction]
+
+^
+libbf.c:5260:0: style: The function 'bf_asin' is never used. [unusedFunction]
+
+^
+libbf.c:5223:0: style: The function 'bf_atan2' is never used. [unusedFunction]
+
+^
+libbf.c:3145:0: style: The function 'bf_atof' is never used. [unusedFunction]
+
+^
+libbf.c:3137:0: style: The function 'bf_atof2' is never used. [unusedFunction]
+
+^
+libbf.c:179:0: style: The function 'bf_context_end' is never used. [unusedFunction]
+
+^
+libbf.c:171:0: style: The function 'bf_context_init' is never used. [unusedFunction]
+
+^
+libbf.c:4943:0: style: The function 'bf_cos' is never used. [unusedFunction]
+
+^
+libbf.c:4400:0: style: The function 'bf_exp' is never used. [unusedFunction]
+
+^
+libbf.c:3994:0: style: The function 'bf_ftoa' is never used. [unusedFunction]
+
+^
+libbf.c:2433:0: style: The function 'bf_get_float64' is never used. [unusedFunction]
+
+^
+libbf.c:2577:0: style: The function 'bf_get_int64' is never used. [unusedFunction]
+
+^
+libbf.c:2638:0: style: The function 'bf_get_uint64' is never used. [unusedFunction]
+
+^
+libbf.c:2421:0: style: The function 'bf_logic_and' is never used. [unusedFunction]
+
+^
+libbf.c:2409:0: style: The function 'bf_logic_or' is never used. [unusedFunction]
+
+^
+libbf.c:2415:0: style: The function 'bf_logic_xor' is never used. [unusedFunction]
+
+^
+libbf.c:4656:0: style: The function 'bf_pow' is never used. [unusedFunction]
+
+^
+libbf.c:712:0: style: The function 'bf_print_str' is never used. [unusedFunction]
+
+^
+libbf.c:1826:0: style: The function 'bf_rem' is never used. [unusedFunction]
+
+^
+libbf.c:2482:0: style: The function 'bf_set_float64' is never used. [unusedFunction]
+
+^
+libbf.c:4977:0: style: The function 'bf_sin' is never used. [unusedFunction]
+
+^
+libbf.c:5021:0: style: The function 'bf_tan' is never used. [unusedFunction]
+
+^
+libbf.c:7226:0: style: The function 'bfdec_atof' is never used. [unusedFunction]
+
+^
+libbf.c:7221:0: style: The function 'bfdec_ftoa' is never used. [unusedFunction]
+
+^
+libbf.c:7156:0: style: The function 'bfdec_get_int32' is never used. [unusedFunction]
+
+^
+libbf.c:7204:0: style: The function 'bfdec_pow_ui' is never used. [unusedFunction]
+
+^
+libbf.c:6270:0: style: The function 'bfdec_print_str' is never used. [unusedFunction]
+
+^
+libbf.c:7054:0: style: The function 'bfdec_rem' is never used. [unusedFunction]
+
+^
+libbf.c:7067:0: style: The function 'bfdec_rint' is never used. [unusedFunction]
+
+^
+libbf.c:7072:0: style: The function 'bfdec_sqrt' is never used. [unusedFunction]
+
+^
+libunicode.c:274:0: style: The function 'cr_dump' is never used. [unusedFunction]
+
+^
+cutils.c:98:0: style: The function 'dbuf_init' is never used. [unusedFunction]
+
+^
+cutils.c:125:0: style: The function 'dbuf_write' is never used. [unusedFunction]
+
+^
+libbf.c:675:0: style: The function 'dump_limbs' is never used. [unusedFunction]
+
+^
+cutils.c:324:0: style: The function 'exchange_bytes' is never used. [unusedFunction]
+
+^
+cutils.c:400:0: style: The function 'exchange_int128s' is never used. [unusedFunction]
+
+^
+cutils.c:343:0: style: The function 'exchange_int16s' is never used. [unusedFunction]
+
+^
+cutils.c:362:0: style: The function 'exchange_int32s' is never used. [unusedFunction]
+
+^
+cutils.c:381:0: style: The function 'exchange_int64s' is never used. [unusedFunction]
+
+^
+cutils.c:335:0: style: The function 'exchange_one_byte' is never used. [unusedFunction]
+
+^
+cutils.c:414:0: style: The function 'exchange_one_int128' is never used. [unusedFunction]
+
+^
+cutils.c:354:0: style: The function 'exchange_one_int16' is never used. [unusedFunction]
+
+^
+cutils.c:373:0: style: The function 'exchange_one_int32' is never used. [unusedFunction]
+
+^
+cutils.c:392:0: style: The function 'exchange_one_int64' is never used. [unusedFunction]
+
+^
+libbf.c:5464:0: style: The function 'fast_udiv_init' is never used. [unusedFunction]
+
+^
+cutils.c:75:0: style: The function 'has_suffix' is never used. [unusedFunction]
+
+^
+libregexp.c:2538:0: style: The function 'lre_check_stack_overflow' is never used. [unusedFunction]
+
+^
+libregexp.c:2531:0: style: The function 'lre_get_flags' is never used. [unusedFunction]
+
+^
+libunicode.c:265:0: style: The function 'lre_is_case_ignorable' is never used. [unusedFunction]
+
+^
+libunicode.c:240:0: style: The function 'lre_is_cased' is never used. [unusedFunction]
+
+^
+libregexp.c:173:0: style: The function 'lre_is_space' is never used. [unusedFunction]
+
+^
+cutils.c:50:0: style: The function 'pstrcat' is never used. [unusedFunction]
+
+^
+cutils.c:501:0: style: The function 'rqsort' is never used. [unusedFunction]
+
+^
+libbf.c:5402:0: style: The function 'shld' is never used. [unusedFunction]
+
+^
+libbf.c:5395:0: style: The function 'shrd' is never used. [unusedFunction]
+
+^
+cutils.c:59:0: style: The function 'strstart' is never used. [unusedFunction]
+
+^
+libunicode.c:835:0: style: The function 'unicode_normalize' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
